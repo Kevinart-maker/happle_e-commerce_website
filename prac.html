@@ -1,0 +1,206 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            overflow: hidden;
+            border: 2px solid;
+            height: 20rem;
+            width: 90%;
+            padding: 0;
+            position: relative;
+        }
+        .cc{
+            height: 20rem;
+            width: 100%;
+            position: absolute;
+            color: azure;
+            font-size: xx-large;
+            font-weight: 800;
+            transition: 2s linear;
+        }
+        .col1{
+            background-color: green;
+        }
+        .col2{
+            background-color: yellow;
+        }
+        .col3{
+            background-color: red;
+        }
+        .cc.active{
+            translate: 0;
+            z-index: 100;
+        }
+        .cc.next{
+            z-index: -5;
+            translate: 100rem;
+        }
+        .cc.out{
+            translate: -30rem;
+            z-index: -100;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="cc active col1">
+
+        </div>
+        <div class="cc next col2">
+            
+        </div>
+        <div class="cc out col3">
+            
+        </div>
+    </div>
+
+
+    <script>
+        let cc = document.querySelectorAll('.cc');
+
+        setInterval(() => {
+            cc.forEach((element) => {
+                if(element.classList.contains("active")){
+                    element.classList.remove("active");
+                    element.classList.add('out');
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, 1500);
+                }else if(element.classList.contains('next')){
+                    element.classList.remove('next');
+                    element.classList.add('active');
+                    setTimeout(() => {
+                        element.style.display = 'block';
+                    }, 1000)
+                }else if(element.classList.contains('out')){
+                    element.classList.remove('out');
+                    element.classList.add('next');
+                    setTimeout(() => {
+                        element.style.display = 'block';
+                    }, 3000)
+                }
+            });
+        }, 5000)
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #131316;
+            color: #ffff;
+            font-family: candara;
+            padding: 0;
+            margin: 0;
+        }
+
+        section{
+            display: grid;
+            place-items: center;
+            align-content: center;
+            min-height: 100vh;
+        }
+
+        .hidden{
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100%);
+            transition: all 2s;
+        }
+
+        .show{
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+        .logos{
+            display: flex;
+            gap: 5%;
+        }
+        .logo{
+            width: 200px;
+            height: 200px;
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+        .logo:nth-child(2){
+            transition-delay: 200ms;
+        }
+        .logo:nth-child(3){
+            transition-delay: 400ms;
+        }
+        .logo:nth-child(4){
+            transition-delay: 600ms;
+        }
+    </style>
+</head>
+<body>
+    <section class="hidden">
+        <h1>Hi there everyone</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quam esse ea dolor perferendis recusandae molestiae distinctio saepe, repudiandae suscipit iusto hic praesentium iste quia quo optio eveniet, quisquam reiciendis.</p>
+    </section>
+
+    <section class="hidden">
+        <h1>Hi there everyone</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quam esse ea dolor perferendis recusandae molestiae distinctio saepe, repudiandae suscipit iusto hic praesentium iste quia quo optio eveniet, quisquam reiciendis.</p>
+    </section>
+    <section class="hidden">
+        <h1>Hi there everyone</h1>
+        <p>This is my website
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae nam, distinctio cupiditate praesentium sint fugit voluptas temporibus debitis deserunt blanditiis sit inventore incidunt quis aliquid at nisi? Dolores, cumque odio?
+        </p>
+    </section>
+
+    <section class="hidden">
+        <h1>Hi there everyone</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam soluta sit beatae? Nulla sint laudantium soluta minus culpa sapiente accusantium at repellendus, aliquid iure beatae vero aspernatur officia illum molestias?</p>
+    </section>
+
+    <section>
+        <h2>really good</h2>
+        <div class="logos">
+            <div class="logo hidden">
+
+            </div>
+            <div class="logo hidden">
+
+            </div>
+            <div class="logo hidden">
+
+            </div>
+            <div class="logo hidden">
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry =>{
+                console.log(entry)
+                if (entry.isIntersecting){
+                    entry.target.classList.add('show');
+                }
+                else{
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
