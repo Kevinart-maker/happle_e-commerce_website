@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happle</title>
+    <link rel="stylesheet" href="shop.css"> 
+    <link rel="stylesheet" href="scroll.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <a id="home"></a>
+<div class="nav">
+    <input type="checkbox" id="checkInput">
+    <label for="checkInput" class="lines">
+        <div class="line"></div>
+    </label>
+    <div class="menu">
+        <div class="cancel" onclick="menu()"><i class='bx bxs-x-circle'></i></div>
+        <li class="menuItems"><a onclick="menu()" href="#home">HOME</a></li>
+        <li class="menuItems"><a onclick="menu()" href="#shop">SHOP</a></li>
+        <li class="menuItems"><a onclick="menu()" href="#contact">CONTACT</a></li>
+        <li class="socialIcons">
+            <a href="https://github.com/Kevinart-maker"><i class='bx bxl-github'></i></a>
+            <a href="https://twitter.com/OdeyemiKevin?t=TpIyjG-HmD3brK3FiRkoSQ&s=09"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://wa.me/qr/R7EVB6FPGYEEB1"><i class='bx bxl-whatsapp' ></i></a>
+        </li>
+
+        <div class="logo"><h1>HAPPLE</h1></div>
+    </div>
+    <div class="logo"><h1>HAPPLE</h1></div>
+
+      <div class="cart"> <i id="cart" class='bx bx-cart'></i></div>
+</div>
+
+<div class="titleImg hidden">
+    <div class="con">
+        <h2 class="hidden">Airpods in, Volume up, <br> Ignore the world!</h2>
+        <button class="hidden btn-click">Shop Now</button>
+    </div>
+</div>
+
+<div class="advert">
+    <div class="ad topad hidden">
+        <img src="airpods_max__f265q4g4ddym_large.png" alt="">
+        <div class="text">
+            <h2> <span class="little">Enjoy the</span> <br> Airpods Max</h2>
+            <button>Shop Collection</button>
+        </div>
+    </div>
+    <div class="ad botad hidden">
+        <div class="img">
+            <img src="airpods_2ndgen_left__gjpt8k836yy6_large.png" class="twin-img img-one" alt="">
+            <img src="airpods_2ndgen_right__gahfggwvcx6q_large.png" class="twin-img img-two"alt="">
+        </div>
+        <div class="text">
+            <h2><span class="little">Enjoy the</span><br> Airpods</h2>
+            <p>2nd generation</p>
+            <button>Shop Collection</button>
+        </div>
+    </div>
+    <div class="ad midad hidden">
+        <img src="airpods_3rd_gen__dhy5bknhvtqq_large.jpg" alt="">
+        <div class="text">
+            <h2><span class="little">Enjoy the</span> <br> Airpods</h2>
+            <p>3rd generation</p>
+            <button>Shop Collection</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cart -->
+<div class="cart-space">
+    <h2 class="cart-title">Your Cart</h2>
+    <!-- content -->
+    <div class="cart-content">
+
+
+    </div>
+    <!-- Total -->
+    <div class="total">
+        <div class="total-title">   TOTAL</div>
+        <div class="total-price">$0</div>
+    </div>
+    <!-- Buy Button -->
+<button type="button" class="btn-buy">Buy Now</button>
+<!-- Cart Close -->
+<i class='bx bxs-x-circle ' id="close-cart"></i>
+
+
+
+
+</div>
+
+<a id="shop"></a>
+<section class="shop">
+    <h2 class="section-title">
+        Shop Products
+    </h2>
+
+    <div class="shop-content">
+
+        <!-- Box 1 -->
+        <div class="product-box">
+            <div class="productImg">
+            <img id="dining" class="product-img" src="4900964_sd.jpg" alt="">                        
+            </div>
+
+            <h2 class="product-title">Apple - AirPods Pro (2nd generation) - White </h2>
+            <div class="price">
+                <p class="price-tag">$199.99</p>
+            </div>
+           <div class="icons">
+            <i class='bx bxs-heart'></i>
+            <i  id="add" class='bx bx-cart'></i>
+            </div>
+            <div class="add" id="add">ADD TO CART</div>
+        </div>
+
+                <!-- Box 2 -->
+        <div class="product-box">
+            <div class="productImg">
+            <img id="arm" class="product-img" src="6344418_sd.jpg" alt="">                        
+            </div>
+
+            <h2 class="product-title">Apple - Geek Squad Certified Refurbished AirPods with Charging Case (Latest Model) - White</h2>
+            <div class="price">
+                <p class="price-tag">$91.99</p>
+            </div>
+            <div class="icons">
+                <i class='bx bxs-heart'></i>
+                <i  id="add" class='bx bx-cart'></i>
+                </div>
+                <div class="add" id="add">ADD TO CART</div>
+        </div>
+
+                <!-- Box 3-->
+                <div class="product-box">
+                    <div class="productImg">
+                    <img id="seater" class="product-img" src="6489327_sd.jpg" alt="">                        
+                    </div>
+
+                    <h2 class="product-title">  
+                        Apple - Geek Squad Certified Refurbished AirPods Pro (1st generation) with Magsafe Charging Case - White
+                    </h2>
+                    <div class="price">
+                        <p class="price-tag">$179.99</p>
+                    </div>
+                    <div class="icons">
+                        <i class='bx bxs-heart'></i>
+                        <i  id="add" class='bx bx-cart'></i>
+                        </div>
+                        <div class="add" id="add">ADD TO CART</div>
+                </div>
+
+        <!-- Box 4 -->
+        <div class="product-box">
+            <div class="productImg">
+            <img id="bed" class="product-img" src="6489522_sd.jpg" alt="">                        
+            </div>
+
+            <h2 class="product-title">Fpple - Geek Squad Certified Refurbished AirPods (4th generation) with Lightning Charging Case - White </h2>
+            
+            <div class="price">
+                <p class="price-tag">$109.99</p>
+            </div>
+            <div class="icons">
+                <i class='bx bxs-heart'></i>
+                <i  id="add" class='bx bx-cart'></i>
+                </div>
+                <div class="add" id="add">ADD TO CART</div>
+</div>
+
+                <!-- Box 5 -->
+        <div class="product-box">
+            <div class="productImg">
+            <img id="dining" class="product-img" src="4900964_sd.jpg" alt="">                        
+            </div>
+
+            <h2 class="product-title">Apple - AirPods Pro (3rd generation) - White </h2>
+            <div class="price">
+                <p class="price-tag">$199.99</p>
+            </div>
+            <div class="icons">
+                <i class='bx bxs-heart'></i>
+                <i  id="add" class='bx bx-cart'></i>
+                </div>
+                <div class="add" id="add">ADD TO CART</div>
+        </div>
+
+                        <!-- Box 6 -->
+        <div class="product-box">
+            <div class="productImg">
+            <img id="rock" class="product-img" src="6525171_sd.jpg" alt="">                
+            </div>
+            <h2 class="product-title">Apple - Geek Squad Certified Refurbished AirPods (3rd generation) with Lightning Charging Case - White</h2>
+           
+            <div class="price">
+                <p class="price-tag">$109.99</p>
+            </div>
+            <div class="icons">
+                <i class='bx bxs-heart'></i>
+                <div id="add">
+                    <i id="add" class='bx bx-cart'></i>
+                </div>
+                </div>
+                <div class="add" id="add">ADD TO CART</div>
+        </div>
+    </div>
+</section>
+
+<div class="blog">
+    <h1>LATEST BLOG</h1>
+    <div class="blogContent">
+        <img src="headphones-1868612.jpg" alt="" class="hidden">
+        <div class="content hidden">
+            <h2>Lorem Ipsum Dolor Sit Amet</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ducimus ratione. Quia quasi quisquam aspernatur temporibus quos! Odio perferendis rerum, excepturi hic architecto dolore amet, in ab modi tempore aliquid.</p>
+            <button>READ MORE</button>
+        </div>
+    </div>
+
+    <div class="blogContent blogContent2">
+        <div class="content hidden" id="seccon">
+            <h2>Lorem Ipsum Dolor Sit Amet</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ducimus ratione. Quia quasi quisquam aspernatur temporibus quos! Odio perferendis rerum, excepturi hic architecto dolore amet, in ab modi tempore aliquid.</p>
+            <button>READ MORE</button>
+        </div>
+        <img src="girl-869213.jpg" alt="" id="secimg" class="hidden">
+    </div>  
+
+    <button class="view">VIEW ALL</button>
+</div>
+
+<div class="long-line"></div>
+<div class="footer">
+    <div class="prod">
+        <h2>PRODUCTS</h2>
+        <li>Help Center</li>
+        <li>Product Help</li>
+        <li>Warranty</li>
+        <li>Order Status</li>
+    </div>
+    <div class="serv">
+        <h2>SERVICES</h2>
+        <li>Help Center</li>
+        <li>Product Help</li>
+        <li>Warranty</li>
+        <li>Order Status</li>
+    </div>
+    <div class="supp">
+        <h2>SUPPORT</h2>
+        <li>Help Center</li>
+        <li>Product Help</li>
+        <li>Warranty</li>
+        <li>Order Status</li>
+    </div>
+    <div class="main">
+            <h1>HAPPLE</h1>
+        <li class="socialIcons">
+        <a href="https://github.com/Kevinart-maker"><i class='bx bxl-github'></i></a>
+        <a href="https://twitter.com/OdeyemiKevin?t=TpIyjG-HmD3brK3FiRkoSQ&s=09"><i class='bx bxl-twitter' ></i></a>
+        <a href="https://wa.me/qr/R7EVB6FPGYEEB1"><i class='bx bxl-whatsapp' ></i></a>
+    </li>
+    <li><input type="text" placeholder="Enter your email"> <button>SUBSCRIBE</button></li>
+    </div>
+</div>
+
+<a id="contact"></a>
+
+ <!-- LInk to JS -->
+ <script src="nav.js"></script>
+ <script src="shop.js"></script>
+<script src="scroll.js"></script>
+</body>
+</html>
